@@ -1,0 +1,26 @@
+{
+  "name": "mome",
+  "version": "1.0.0",
+  "description": "MOME clothing brand — PostgreSQL backend",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.6.2",
+    "express-validator": "^7.3.2",
+    "jest": "^30.4.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^9.0.5",
+    "pg": "^8.13.1",
+    "supertest": "^7.2.2"
+  }
+}

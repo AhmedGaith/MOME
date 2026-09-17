@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="MOME — Modern essentials for everyday life. Thoughtfully designed clothing.">
+  <title>MOME — Clothing Brand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo">MOME</a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#orders" id="ordersNav" hidden>My Orders</a>
+      </nav>
+
+      <div class="search-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" id="headerSearch" placeholder="Search products…" aria-label="Search products">
+      </div>
+
+      <div class="header-actions">
+        <button type="button" class="header-icon-btn" id="accountBtn" aria-label="Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span id="accountLabel">Account</span>
+        </button>
+        <button type="button" class="header-icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount" hidden>0</span>
+        </button>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="eyebrow eyebrow--light">New Collection · 2026</p>
+      <h1>Wear Less.<br>Choose <em>Better.</em></h1>
+      <p class="hero-sub">Timeless pieces crafted with care, designed for the way you live.</p>
+      <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+      <span class="scroll-hint" aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <!-- Marquee ticker -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Wear Less</span><span>Choose Better</span><span>Made to Last</span><span>Organic Cotton</span><span>Small Batch</span><span>Free Returns</span>
+      <span>Wear Less</span><span>Choose Better</span><span>Made to Last</span><span>Organic Cotton</span><span>Small Batch</span><span>Free Returns</span>
+    </div>
+  </div>
+
+  <!-- Shop -->
+  <section class="section reveal" id="shop">
+    <div class="section-header">
+      <p class="eyebrow">The Collection</p>
+      <h2>Shop</h2>
+      <p>Explore our curated selection of essentials.</p>
+    </div>
+
+    <div class="search-bar" style="max-width:400px;margin:0 auto 1.5rem;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+      </svg>
+      <input type="search" id="searchInput" placeholder="Search by name, category…" aria-label="Search shop">
+    </div>
+
+    <div class="filters" id="filters"></div>
+    <p class="search-results-info" id="searchResultsInfo"></p>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- About -->
+  <section class="section reveal" id="about">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1558171813-4c088753af92?w=800&q=80" alt="MOME studio">
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">About MOME</p>
+        <h2>Our Story</h2>
+        <p class="about-lead">MOME was born from a simple idea: clothing should feel good, last long, and leave a lighter footprint. We design pieces you'll reach for every day — not trends that fade by season.</p>
+        <p>Every garment is made with responsibly sourced materials and produced in small batches to reduce waste. Quality over quantity, always.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Organic Cotton</span>
+          </div>
+          <div class="stat">
+            <strong>Small</strong>
+            <span>Batch Production</span>
+          </div>
+          <div class="stat">
+            <strong>Free</strong>
+            <span>Returns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section newsletter-section reveal" style="background: var(--bg-dark); color: var(--white);">
+    <div class="section-header" style="margin-bottom: 2rem;">
+      <p class="eyebrow">Newsletter</p>
+      <h2 style="color: var(--white);">Stay in the Loop</h2>
+      <p style="color: rgba(255,255,255,0.6);">Subscribe for early access to new collections and exclusive offers.</p>
+    </div>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Your email address" required style="flex:1; padding: 1rem 1.25rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; background: rgba(255,255,255,0.06); color: var(--white); font-size: 1rem; outline: none;">
+      <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem;">Subscribe</button>
+    </form>
+    <p id="newsletterSuccess" style="color: var(--accent); text-align: center; margin-top: 1rem; display: none;">Thanks for subscribing!</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact-section reveal" id="contact">
+    <div class="section-header">
+      <p class="eyebrow">Get in Touch</p>
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you. Reach out anytime.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            hello@mome.com
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            +1 (555) 123-4567
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Studio</strong>
+            42 Fashion Ave, New York, NY 10001
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="general">General Inquiry</option>
+            <option value="order">Order Support</option>
+            <option value="wholesale">Wholesale</option>
+            <option value="press">Press</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+        </div>
+        <div class="form-success" id="formSuccess">Thank you! Your message has been sent.</div>
+        <p class="form-error" id="formError" hidden></p>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Order History -->
+  <section class="section reveal" id="orders" hidden>
+    <div class="section-header">
+      <p class="eyebrow">Order History</p>
+      <h2>My Orders</h2>
+      <p>Track your recent orders and purchase history.</p>
+    </div>
+    <div class="orders-container" id="ordersContainer"></div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band reveal">
+    <p class="eyebrow eyebrow--light">New Collection · 2026</p>
+    <h2>Made to last.</h2>
+    <p>Pieces you'll reach for every day. Quality over quantity, always.</p>
+    <a href="#shop" class="btn btn-primary">Shop the Collection</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">MOME</span>
+      <div class="footer-links">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#" rel="noopener">Instagram</a>
+        <a href="#" rel="noopener">TikTok</a>
+        <a href="#" rel="noopener">Pinterest</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 MOME. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal auth-modal">
+      <button type="button" class="modal-close" id="authClose" aria-label="Close">&times;</button>
+      <p class="auth-notice" id="authNotice" hidden></p>
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab active" data-tab="login">Sign In</button>
+        <button type="button" class="auth-tab" data-tab="register">Register</button>
+        <button type="button" class="auth-tab" data-tab="account">My Account</button>
+      </div>
+      <p class="auth-error" id="authError" hidden></p>
+
+      <div class="auth-panel" data-panel="login">
+        <h3>Welcome back</h3>
+        <p>Sign in to save and track your orders.</p>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      </div>
+
+      <div class="auth-panel" data-panel="register" hidden>
+        <h3>Create account</h3>
+        <p>Create an account for faster checkout and order history.</p>
+        <form id="registerForm" class="auth-form">
+          <input type="text" id="registerName" placeholder="Full name" required>
+          <input type="email" id="registerEmail" placeholder="Email" required>
+          <input type="password" id="registerPassword" placeholder="Password (min 6 chars)" minlength="6" required>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+        </form>
+      </div>
+
+      <div class="auth-panel" data-panel="account" hidden>
+        <h3>My Account</h3>
+        <p><strong id="accountName"></strong><br><span id="accountEmail"></span></p>
+        <button type="button" class="btn btn-outline-dark" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button type="button" class="modal-close" id="cartClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button type="button" class="btn btn-primary" id="checkoutBtn" disabled>Checkout</button>
+      <p class="cart-login-note">Guest checkout is available. Please add your phone number so we can confirm your order.</p>
+
+      <div id="checkoutSection" hidden>
+        <h4>Shipping Details</h4>
+        <form id="checkoutForm" class="checkout-form">
+          <input type="text" id="shipName" placeholder="Full name" required>
+          <input type="tel" id="shipPhone" placeholder="Phone number" required>
+          <input type="text" id="shipAddress" placeholder="Street address" required>
+          <input type="text" id="shipCity" placeholder="City" required>
+          <input type="text" id="shipZip" placeholder="ZIP code" required>
+          <p class="checkout-error" id="checkoutError" hidden></p>
+          <button type="submit" class="btn btn-dark">Place Order</button>
+        </form>
+      </div>
+      <p class="checkout-success" id="checkoutSuccess" hidden>Order placed successfully!</p>
+    </div>
+  </aside>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
